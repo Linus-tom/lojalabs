@@ -41,9 +41,9 @@ const categories = [
 
 const navigation = [
   { name: "Início", href: "/" },
-  { name: "Produtos", href: "#produtos" },
   { name: "Blog", href: "https://aglabs.ia.br/blog", external: true },
-  { name: "AgLabs", href: "https://aglabs.ia.br", external: true },
+  { name: "Websites", href: "https://lp.aglabs.ia.br/", external: true },
+  { name: "Agentes IA", href: "https://rag.aglabs.api.br/", external: true },
 ];
 
 export function CommerceHero() {
@@ -94,7 +94,7 @@ export function CommerceHero() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="cursor-pointer relative group hover:text-primary transition-colors"
+                className="cursor-pointer text-foreground/80 hover:text-foreground hover:bg-transparent transition-colors"
               >
                 <Search className="w-5 h-5" />
               </Button>
@@ -245,13 +245,11 @@ export function CommerceHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
           >
-            {/* bg image */}
+            {/* bg image — sem overlay */}
             <div
-              className="absolute inset-0 bg-cover bg-center opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500"
+              className="absolute inset-0 bg-cover bg-center opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
               style={{ backgroundImage: `url(${category.image})` }}
             />
-            {/* dark overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
             <a
               href={category.href}

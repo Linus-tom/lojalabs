@@ -34,7 +34,7 @@ const categories = [
   {
     title: "Achadinhos",
     image:
-      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/link%20na%20bio/8301fee7-2769-4463-88b9-922d6009aaea.png",
+      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/link%20na%20bio/achadinho.png",
     href: "https://afiliados-aeq.pages.dev/amz/",
   },
 ];
@@ -60,7 +60,7 @@ export function CommerceHero() {
         }}
       >
         {/* Dark overlay sobre o bg do card hero */}
-        <div className="absolute inset-0 bg-black/60 z-0" />
+        <div className="absolute inset-0 bg-black/75 z-0" />
         {/* ─── Header ─── */}
         <header className="flex items-center relative z-10">
           {/* Left: logo + nav */}
@@ -259,17 +259,10 @@ export function CommerceHero() {
               rel="noopener noreferrer"
               className="absolute inset-0 z-20"
             >
-              <h2
-                className="text-center text-2xl sm:text-3xl font-bold relative z-10 text-white my-2 sm:my-4 drop-shadow-lg group-hover:text-primary/90 transition-colors duration-300"
-                style={{ fontFamily: "var(--font-syne), sans-serif" }}
-              >
-                {category.title}
-              </h2>
-
-              {/* arrow button bottom-right — idêntico ao original */}
-              <div className="absolute bottom-0 right-0 w-16 h-16 md:w-20 md:h-20 bg-background/95 backdrop-blur-sm rounded-tl-xl flex items-center justify-center z-10 border-l border-t border-border/50">
-                <div className="absolute bottom-2 right-2 md:bottom-3 md:right-3 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all duration-300 shadow-lg">
-                  <ArrowUpRight className="w-5 h-5" />
+              {/* arrow button bottom-right — sem borda */}
+              <div className="absolute bottom-0 right-0 w-16 h-16 md:w-20 md:h-20 bg-black/80 backdrop-blur-sm rounded-tl-xl flex items-center justify-center z-10">
+                <div className="absolute bottom-2 right-2 md:bottom-3 md:right-3 w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all duration-300 shadow-lg">
+                  <ArrowUpRight className="w-5 h-5 text-white" />
                 </div>
               </div>
             </a>

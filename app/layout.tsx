@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     "Automatize processos, crie agentes inteligentes e escale com tecnologia que trabalha por você. Powered by AgLabs.",
   keywords: ["IA", "automação", "agentes", "inteligência artificial", "AgLabs", "LojaLabs"],
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   openGraph: {
     title: "LojaLabs — Soluções de IA",

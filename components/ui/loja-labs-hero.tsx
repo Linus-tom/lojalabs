@@ -17,7 +17,7 @@ const categories = [
     title: "Templates React",
     image:
       "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/link%20na%20bio/vibekit-2.png",
-    href: "https://templates.aglabs.api.br/",
+    href: "https://templates.aglabs.ia.br/",
   },
   {
     title: "Cortes Virais",
@@ -41,7 +41,7 @@ const categories = [
 
 const navigation = [
   { name: "Início", href: "/" },
-  { name: "Blog", href: "https://aglabs.api.br/blog", external: true },
+  { name: "Blog", href: "https://aglabs.ia.br/blog", external: true },
   { name: "Websites", href: "https://lp.aglabs.ia.br/", external: true },
   { name: "Agentes IA", href: "https://rag.aglabs.api.br/", external: true },
 ];

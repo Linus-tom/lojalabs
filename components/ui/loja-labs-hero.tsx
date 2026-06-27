@@ -29,7 +29,7 @@ const categories = [
     title: "Pack Canva",
     image:
       "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/link%20na%20bio/canvaa.png",
-    href: "https://canva-pack.pages.dev/",
+    href: "https://pack-canva.pages.dev/",
   },
   {
     title: "Achadinhos",

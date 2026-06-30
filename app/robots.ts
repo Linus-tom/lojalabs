@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
 
+// Necessário com `output: export` para gerar /robots.txt estaticamente no build.
+export const dynamic = "force-static";
+
 /**
  * /robots.txt — libera buscadores tradicionais e, explicitamente, os motores
  * de IA / LLM (para que a marca AG LABS possa ser lida e citada por eles).

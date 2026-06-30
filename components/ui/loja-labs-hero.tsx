@@ -77,8 +77,7 @@ export function CommerceHero() {
       <div
         className="mt-6 rounded-2xl relative overflow-hidden"
         style={{
-          backgroundImage:
-            'url("https://i.pinimg.com/1200x/b3/be/3a/b3be3a3d7253c5e0d796574cae5a3391.jpg")',
+          backgroundImage: 'url("/hero-bg.jpg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

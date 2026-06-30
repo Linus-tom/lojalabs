@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const categories = [
   {
@@ -88,13 +89,13 @@ export function CommerceHero() {
         <header className="flex items-center relative z-10">
           {/* Left: logo + nav */}
           <div className="w-full md:w-2/3 lg:w-1/2 bg-background/95 backdrop-blur-sm p-4 rounded-br-2xl flex items-center gap-2">
-            <a href="/" className="flex-shrink-0 mr-2">
+            <Link href="/" className="shrink-0 mr-2">
               <img
                 src="/logo-aglabs.png"
                 alt="AG LABS"
                 className="h-8 w-auto brightness-0 invert"
               />
-            </a>
+            </Link>
 
             <nav className="hidden lg:flex items-center justify-between w-full">
               {navigation.map((item) => (
@@ -140,13 +141,13 @@ export function CommerceHero() {
               >
                 <SheetHeader className="p-6 text-left border-b border-border/50">
                   <SheetTitle className="flex items-center justify-between">
-                    <a href="/">
+                    <Link href="/">
                       <img
                         src="/logo-aglabs.png"
                         alt="AG LABS"
                         className="h-7 w-auto brightness-0 invert"
                       />
-                    </a>
+                    </Link>
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col p-6 space-y-1">

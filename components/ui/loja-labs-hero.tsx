@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import Link from "next/link";
 
 const categories = [
@@ -72,6 +72,32 @@ const navigation = [
 ];
 
 export function CommerceHero() {
+  const reduceMotion = useReducedMotion();
+
+  // Stagger orquestrado pelo container — os filhos herdam o timing,
+  // sem precisar de delay manual por índice.
+  const gridVariants: Variants = {
+    hidden: {},
+    visible: {
+      transition: {
+        delayChildren: 0.05,
+        staggerChildren: reduceMotion ? 0 : 0.08,
+      },
+    },
+  };
+
+  // Entrada de cada card. Em prefers-reduced-motion fazemos apenas o fade
+  // (sem deslocamento/escala), que é o comportamento acessível recomendado.
+  const cardVariants: Variants = {
+    hidden: reduceMotion ? { opacity: 0 } : { opacity: 0, y: 24, scale: 0.985 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+    },
+  };
+
   return (
     <div className="w-full relative container px-2 mx-auto max-w-7xl min-h-screen">
       {/* ─── Hero card ─── */}
@@ -257,21 +283,34 @@ export function CommerceHero() {
       </div>
 
       {/* ─── Product cards ─── */}
-      <div
+      <motion.div
         id="produtos"
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mt-12 pb-16"
+        variants={gridVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
       >
-        {categories.map((category, index) => (
+        {categories.map((category) => (
           <motion.div
             key={category.title}
-            className="group relative bg-muted/50 backdrop-blur-sm rounded-3xl p-4 sm:p-6 min-h-[250px] sm:min-h-[300px] w-full overflow-hidden transition-all duration-500"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+            variants={cardVariants}
+            whileHover={
+              reduceMotion
+                ? undefined
+                : { y: -6, transition: { duration: 0.3, ease: "easeOut" } }
+            }
+            // IMPORTANTE: nada de `transition-*` (CSS) aqui — esta camada é
+            // controlada pelo Framer Motion. Misturar transição CSS com a
+            // animação JS na mesma propriedade causava o flicker no final.
+            // `will-change-transform` mantém a camada promovida e evita o
+            // repaint de despromoção ao terminar a animação.
+            className="group relative bg-muted/50 rounded-3xl p-4 sm:p-6 min-h-[250px] sm:min-h-[300px] w-full overflow-hidden will-change-transform"
           >
-            {/* bg image — sem overlay */}
+            {/* bg image — sem overlay. As transições CSS de hover ficam aqui,
+                num elemento que o Framer Motion NÃO controla (sem conflito). */}
             <div
-              className="absolute inset-0 bg-cover bg-center opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+              className="absolute inset-0 bg-cover bg-center opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
               style={{ backgroundImage: `url(${category.image})` }}
             />
 
@@ -291,7 +330,7 @@ export function CommerceHero() {
             </a>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

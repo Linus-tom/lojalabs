@@ -68,7 +68,7 @@ export function CommerceHero() {
             <a href="/" className="flex-shrink-0 mr-2">
               <img
                 src="/logo-aglabs.png"
-                alt="AgLabs"
+                alt="AG LABS"
                 className="h-8 w-auto brightness-0 invert"
               />
             </a>
@@ -120,7 +120,7 @@ export function CommerceHero() {
                     <a href="/">
                       <img
                         src="/logo-aglabs.png"
-                        alt="AgLabs"
+                        alt="AG LABS"
                         className="h-7 w-auto brightness-0 invert"
                       />
                     </a>
@@ -166,7 +166,7 @@ export function CommerceHero() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Ir para AgLabs
+                      Ir para AG LABS
                       <ArrowUpRight className="w-4 h-4 ml-2" />
                     </a>
                   </Button>
@@ -188,7 +188,7 @@ export function CommerceHero() {
                 rel="noopener noreferrer"
               >
                 <span className="pl-4 py-2 text-sm font-medium text-foreground">
-                  Ir para AgLabs
+                  Ir para AG LABS
                 </span>
                 <div className="rounded-full flex items-center justify-center m-auto bg-primary w-10 h-10 ml-2 group-hover:scale-110 transition-transform duration-300">
                   <ArrowUpRight className="w-5 h-5 text-primary-foreground" />
@@ -226,7 +226,7 @@ export function CommerceHero() {
               transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             >
               Templates, ferramentas de IA e recursos premium criados pela
-              AgLabs para acelerar seu negócio ou projeto criativo.
+              AG LABS para acelerar seu negócio ou projeto criativo.
             </motion.p>
           </div>
         </motion.section>

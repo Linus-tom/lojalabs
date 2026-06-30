@@ -15,10 +15,12 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lojalabs.com.br"),
   title: "LojaLabs — Soluções de IA para o seu negócio",
+  alternates: { canonical: "/" },
   description:
-    "Automatize processos, crie agentes inteligentes e escale com tecnologia que trabalha por você. Powered by AgLabs.",
-  keywords: ["IA", "automação", "agentes", "inteligência artificial", "AgLabs", "LojaLabs"],
+    "Automatize processos, crie agentes inteligentes e escale com tecnologia que trabalha por você. Powered by AG LABS.",
+  keywords: ["IA", "automação", "agentes", "inteligência artificial", "AG LABS", "LojaLabs"],
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "LojaLabs — Soluções de IA",
-    description: "Automatize processos e escale com IA. Powered by AgLabs.",
+    description: "Automatize processos e escale com IA. Powered by AG LABS.",
     url: "https://lojalabs.com.br",
     siteName: "LojaLabs",
     locale: "pt_BR",

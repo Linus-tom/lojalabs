@@ -41,6 +41,10 @@ export const viewport: Viewport = {
 };
 
 const PRODUCTS = [
+  { name: "Websites que vendem", url: "https://lp.aglabs.ia.br/" },
+  { name: "Agentes de IA", url: "https://rag.aglabs.api.br/" },
+  { name: "Automações (Workflows)", url: "https://wf.aglabs.ia.br/" },
+  { name: "Barberias — SaaS para barbearias", url: "https://barberias.com.br/" },
   { name: "Templates React (VibeKit)", url: "https://templates.aglabs.ia.br/" },
   { name: "Cortes Virais", url: "https://cortes-virais.pages.dev/" },
   { name: "Pack Canva", url: "https://pack-canva.pages.dev/" },

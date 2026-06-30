@@ -14,7 +14,31 @@ import { motion } from "framer-motion";
 
 const categories = [
   {
-    title: "Templates React",
+    title: "Websites que vendem",
+    image:
+      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/produtos/WEBSITE.png",
+    href: "https://lp.aglabs.ia.br/",
+  },
+  {
+    title: "Agentes de IA",
+    image:
+      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/produtos/AGENTES.png",
+    href: "https://rag.aglabs.api.br/",
+  },
+  {
+    title: "Automações (Workflows)",
+    image:
+      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/produtos/AUTOMACOES.png",
+    href: "https://wf.aglabs.ia.br/",
+  },
+  {
+    title: "Barberias — SaaS para barbearias",
+    image:
+      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/produtos/barberias.png",
+    href: "https://barberias.com.br/",
+  },
+  {
+    title: "Templates React (VibeKit)",
     image:
       "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/link%20na%20bio/vibekit-2.png",
     href: "https://templates.aglabs.ia.br/",
@@ -255,6 +279,7 @@ export function CommerceHero() {
               href={category.href}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={category.title}
               className="absolute inset-0 z-20"
             >
               {/* arrow button bottom-right — sem borda */}

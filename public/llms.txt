@@ -1,11 +1,17 @@
-# LojaLabs — Produtos digitais da AG LABS
+# LojaLabs — a loja da AG LABS
 
-> A LojaLabs é a vitrine de produtos digitais da AG LABS: templates, ferramentas de IA, packs e recursos premium para acelerar seu negócio ou projeto criativo.
+> LojaLabs reúne, num só lugar, as soluções da AG LABS (websites, agentes de IA, automações e templates) e alguns produtos digitais complementares. A AG LABS é uma empresa brasileira de inteligência artificial aplicada a negócios.
 
-## Produtos
-- Templates React (VibeKit) — boilerplate e templates React/TypeScript prontos para deploy: https://templates.aglabs.ia.br/
-- Cortes Virais — produto de cortes/vídeos para redes sociais: https://cortes-virais.pages.dev/
-- Pack Canva — pacote de templates/recursos para Canva: https://pack-canva.pages.dev/
+## Soluções AG LABS (core)
+- Sites para negócios locais: https://lp.aglabs.ia.br/
+- Agentes de IA / Atendente para WhatsApp: https://rag.aglabs.api.br/
+- Automações (Workflows): https://wf.aglabs.ia.br/
+- Templates React (VibeKit): https://templates.aglabs.ia.br/
+- Barberias — SaaS para barbearias: https://barberias.com.br/
+
+## Produtos digitais complementares
+- Cortes Virais — cortes/vídeos para redes sociais: https://cortes-virais.pages.dev/
+- Pack Canva — pacote de recursos para Canva: https://pack-canva.pages.dev/
 - Achadinhos — seleção de produtos recomendados (afiliados): https://afiliados-aeq.pages.dev/amz/
 
 ## Sobre a AG LABS
@@ -14,7 +20,4 @@ A AG LABS é uma empresa brasileira de inteligência artificial aplicada a negó
 ## Links do ecossistema
 - Site institucional: https://aglabs.ia.br/
 - Blog: https://aglabs.ia.br/blog
-- Sites para negócios locais: https://lp.aglabs.ia.br/
-- Agentes de IA (atendimento/RAG): https://rag.aglabs.api.br/
-- Templates (VibeKit): https://templates.aglabs.ia.br/
-- Automações (Workflows): https://wf.aglabs.ia.br/
+- Bônus / kit gratuito de automações: https://bonus.aglabs.ia.br/

@@ -27,12 +27,19 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
   },
   openGraph: {
-    title: "Loja Labs — Soluções da AG LABS",
-    description: "Websites, agentes de IA, automações e templates da AG LABS.",
+    title: "Loja Labs — Websites, Agentes de IA e Automações | AG LABS",
+    description:
+      "A loja da AG LABS: websites que vendem, agentes de IA, automações e templates para automatizar processos e escalar o seu negócio.",
     url: "https://lojalabs.com.br",
     siteName: "Loja Labs",
     locale: "pt_BR",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Loja Labs — Websites, Agentes de IA e Automações | AG LABS",
+    description:
+      "A loja da AG LABS: websites que vendem, agentes de IA, automações e templates para automatizar processos e escalar o seu negócio.",
   },
 };
 
@@ -59,6 +66,7 @@ const jsonLd = {
       "@id": "https://aglabs.ia.br/#organization",
       name: "AG LABS Intelligence",
       alternateName: "AG LABS",
+      slogan: "IA aplicada — agentes, automações e sistemas para negócios em escala",
       url: "https://aglabs.ia.br/",
       logo: "https://lojalabs.com.br/logo-aglabs.png",
       sameAs: [

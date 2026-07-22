@@ -67,8 +67,24 @@ const jsonLd = {
       name: "AG LABS Intelligence",
       alternateName: "AG LABS",
       slogan: "IA aplicada — agentes, automações e sistemas para negócios em escala",
+      description:
+        "Agência brasileira de inteligência artificial aplicada a negócios: agentes autônomos, automação de processos, integrações de dados e websites de alto desempenho.",
       url: "https://aglabs.ia.br/",
-      logo: "https://lojalabs.com.br/logo-aglabs.png",
+      logo: "https://aglabs.ia.br/android-chrome-512x512.png",
+      areaServed: { "@type": "Country", name: "Brasil" },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Rio Verde",
+        addressRegion: "GO",
+        addressCountry: "BR",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+55-64-99325-9857",
+        contactType: "sales",
+        areaServed: "BR",
+        availableLanguage: ["pt-BR"],
+      },
       sameAs: [
         "https://www.facebook.com/profile.php?id=61573483665476",
         "https://www.instagram.com/ag_labs/",

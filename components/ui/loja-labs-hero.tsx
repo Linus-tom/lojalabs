@@ -307,6 +307,17 @@ export function CommerceHero() {
             // repaint de despromoção ao terminar a animação.
             className="group relative bg-muted/50 rounded-3xl p-4 sm:p-6 min-h-[250px] sm:min-h-[300px] w-full overflow-hidden will-change-transform"
           >
+            {/* O nome do produto precisa existir como texto.
+                O card desenha a imagem como background-image do CSS e o
+                título está impresso dentro do PNG, então até aqui a página
+                inteira tinha 33 palavras indexáveis: oito produtos e nenhuma
+                palavra sobre nenhum deles. Um hub de produtos que não diz o
+                nome dos produtos não ranqueia para nenhum deles.
+                Fica sr-only porque o título já aparece na arte — a intenção é
+                torná-lo legível para buscador e leitor de tela, não mudar o
+                desenho. */}
+            <h2 className="sr-only">{category.title}</h2>
+
             {/* bg image — sem overlay. As transições CSS de hover ficam aqui,
                 num elemento que o Framer Motion NÃO controla (sem conflito). */}
             <div

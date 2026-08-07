@@ -13,53 +13,52 @@ import { Separator } from "@/components/ui/separator";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import Link from "next/link";
 
+// Artes servidas do próprio domínio. Vinham do bucket do Supabase: oito
+// requisições a um terceiro no caminho crítico, e este é o conteúdo visual
+// principal da página — cada card ficava cinza até a resposta chegar.
+//
+// Também estavam muito maiores que o espaço em que aparecem. O card mais
+// largo tem ~360px (uma coluna no mobile) e os PNGs vinham com 800 a 1080px:
+// 4,4MB no total viraram 456KB em WebP de 800px, que ainda cobre tela 2x.
 const categories = [
   {
     title: "Websites que vendem",
-    image:
-      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/produtos/WEBSITE.png",
+    image: "/cards/websites.webp",
     href: "https://lp.aglabs.ia.br/",
   },
   {
     title: "Agentes de IA",
-    image:
-      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/produtos/AGENTES.png",
+    image: "/cards/agentes.webp",
     href: "https://rag.aglabs.api.br/",
   },
   {
     title: "Automações (Workflows)",
-    image:
-      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/produtos/AUTOMACOES.png",
+    image: "/cards/automacoes.webp",
     href: "https://wf.aglabs.ia.br/",
   },
   {
     title: "Barberias — SaaS para barbearias",
-    image:
-      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/produtos/barberias.png",
+    image: "/cards/barberias.webp",
     href: "https://barberias.com.br/",
   },
   {
     title: "Templates React (VibeKit)",
-    image:
-      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/link%20na%20bio/vibekit-2.png",
+    image: "/cards/vibekit.webp",
     href: "https://templates.aglabs.ia.br/",
   },
   {
     title: "Cortes Virais",
-    image:
-      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/link%20na%20bio/cortes%20virais.png",
+    image: "/cards/cortes-virais.webp",
     href: "https://cortes-virais.pages.dev/",
   },
   {
     title: "Pack Canva",
-    image:
-      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/link%20na%20bio/canvaa.png",
+    image: "/cards/pack-canva.webp",
     href: "https://pack-canva.pages.dev/",
   },
   {
     title: "Achadinhos",
-    image:
-      "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/link%20na%20bio/achadinho.png",
+    image: "/cards/achadinhos.webp",
     href: "https://afiliados-aeq.pages.dev/amz/",
   },
 ];

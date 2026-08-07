@@ -54,39 +54,43 @@ export function ProductLogoCloud() {
         Produtos <span className="font-semibold text-white">feitos pela AG LABS</span>
       </h2>
 
-      {/* Faixa: as linhas de cima e de baixo atravessam a página inteira. */}
-      <div className="grid w-full grid-cols-4 border-y border-white/10">
-        {PRODUCTS.map((product, i) => (
-          <a
-            key={product.name}
-            href={product.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`group relative flex flex-col items-center justify-center gap-2 border-white/10 px-1 py-6 transition-colors hover:bg-white/[0.07] sm:gap-3 sm:px-4 sm:py-8 ${CELL[i]}`}
-          >
-            <img
-              src={product.logo}
-              alt={product.name}
-              width={256}
-              height={256}
-              loading="lazy"
-              decoding="async"
-              className="pointer-events-none h-8 w-auto select-none object-contain opacity-90 transition-opacity duration-300 group-hover:opacity-100 sm:h-12"
-            />
-            <span className="text-center text-[10px] font-medium leading-tight tracking-wide text-white sm:text-sm">
-              {product.name}
-            </span>
-
-            {/* O "+" marca o encontro dos divisores com as linhas da faixa. */}
-            {i < 3 && (
-              <PlusIcon
-                strokeWidth={1}
-                aria-hidden="true"
-                className="pointer-events-none absolute -bottom-[12.5px] -right-[12.5px] z-10 size-6 text-white/25"
+      {/* As linhas de cima e de baixo atravessam a página inteira; a malha
+          fica centralizada e fechada dos lados, para os logos respirarem
+          juntos em vez de se espalharem pela largura toda. */}
+      <div className="relative w-full border-y border-white/10">
+        <div className="mx-auto grid w-full max-w-2xl grid-cols-4 border-x border-white/10">
+          {PRODUCTS.map((product, i) => (
+            <a
+              key={product.name}
+              href={product.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group relative flex flex-col items-center justify-center gap-2 border-white/10 px-1 py-6 transition-colors hover:bg-white/[0.07] sm:gap-3 sm:px-4 sm:py-8 ${CELL[i]}`}
+            >
+              <img
+                src={product.logo}
+                alt={product.name}
+                width={256}
+                height={256}
+                loading="lazy"
+                decoding="async"
+                className="pointer-events-none h-8 w-auto select-none object-contain opacity-90 transition-opacity duration-300 group-hover:opacity-100 sm:h-12"
               />
-            )}
-          </a>
-        ))}
+              <span className="text-center text-[10px] font-medium leading-tight tracking-wide text-white sm:text-sm">
+                {product.name}
+              </span>
+
+              {/* O "+" marca o encontro dos divisores com as linhas da faixa. */}
+              {i < 3 && (
+                <PlusIcon
+                  strokeWidth={1}
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -bottom-[12.5px] -right-[12.5px] z-10 size-6 text-white/25"
+                />
+              )}
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

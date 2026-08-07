@@ -47,12 +47,21 @@ export const viewport: Viewport = {
   themeColor: "#0a0a0a",
 };
 
+// Espelho do que a página mostra: os cards de serviço (loja-labs-hero.tsx)
+// e a malha de marcas próprias (product-logo-cloud.tsx). Ao adicionar item
+// em qualquer um dos dois, refletir aqui para o ItemList não sair de sincronia.
 const PRODUCTS = [
+  // Serviços da marca AG LABS
   { name: "Websites que vendem", url: "https://lp.aglabs.ia.br/" },
   { name: "Agentes de IA", url: "https://rag.aglabs.api.br/" },
   { name: "Automações (Workflows)", url: "https://wf.aglabs.ia.br/" },
-  { name: "Barberias — SaaS para barbearias", url: "https://barberias.com.br/" },
   { name: "Templates React (VibeKit)", url: "https://templates.aglabs.ia.br/" },
+  // Produtos de marca própria (entidade própria, AG LABS como creator)
+  { name: "Barberias — SaaS para barbearias", url: "https://barberias.com.br/" },
+  { name: "Members — plataforma para criadores de conteúdo", url: "https://members.ia.br/" },
+  { name: "Viajeki — planejamento de viagens com IA", url: "https://viajeki.com.br/" },
+  { name: "App AG LABS — geração de mídia com IA", url: "https://aglabs.app.br/" },
+  // Produtos complementares
   { name: "Cortes Virais", url: "https://cortes-virais.pages.dev/" },
   { name: "Pack Canva", url: "https://pack-canva.pages.dev/" },
   { name: "Achadinhos", url: "https://afiliados-aeq.pages.dev/amz/" },

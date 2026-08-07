@@ -60,7 +60,7 @@ const PRODUCTS = [
   { name: "Barberias — SaaS para barbearias", url: "https://barberias.com.br/" },
   { name: "Members — plataforma para criadores de conteúdo", url: "https://members.ia.br/" },
   { name: "Viajeki — planejamento de viagens com IA", url: "https://viajeki.com.br/" },
-  { name: "App AG LABS — geração de mídia com IA", url: "https://aglabs.app.br/" },
+  { name: "AG LABS App — geração de mídia com IA", url: "https://lp.aglabs.app.br/" },
   // Produtos complementares
   { name: "Cortes Virais", url: "https://cortes-virais.pages.dev/" },
   { name: "Pack Canva", url: "https://pack-canva.pages.dev/" },

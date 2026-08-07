@@ -26,8 +26,11 @@ const PRODUCTS: Product[] = [
     href: "https://viajeki.com.br/",
   },
   {
-    name: "App AG LABS",
+    name: "AG LABS App",
     logo: "/logos/app-aglabs.png",
+    // Direto no app. Quem clica um logo aqui quer usar a ferramenta, não ler
+    // sobre ela. O ItemList em app/layout.tsx aponta para a LP, que é a
+    // página descritiva — é dela que o crawler precisa.
     href: "https://aglabs.app.br/",
   },
 ];

@@ -29,7 +29,7 @@ const categories = [
   {
     title: "Agentes de IA",
     image: "/cards/agentes.webp",
-    href: "https://rag.aglabs.api.br/",
+    href: "https://rag.aglabs.ia.br/",
   },
   {
     title: "Automações (Workflows)",
@@ -67,7 +67,7 @@ const navigation = [
   { name: "Início", href: "/" },
   { name: "Blog", href: "https://aglabs.ia.br/blog", external: true },
   { name: "Websites", href: "https://lp.aglabs.ia.br/", external: true },
-  { name: "Agentes IA", href: "https://rag.aglabs.api.br/", external: true },
+  { name: "Agentes IA", href: "https://rag.aglabs.ia.br/", external: true },
 ];
 
 export function CommerceHero() {
